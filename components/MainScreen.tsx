@@ -33,16 +33,26 @@ const MainScreen = () => {
 
   return (
     <ScrollView style={mainScreen.container}>
-      <Input
-        style={[mainScreen.input, mainScreen.shadowProp]}
-        title="Age"
-        input={bmiInfo.age}
-      />
-      <Input
-        style={[mainScreen.input, mainScreen.shadowProp]}
-        title="Weight"
-        input={bmiInfo.age}
-      />
+      <View style={{
+        display: "flex",
+        flexDirection: 'row',
+        width: "100%",
+        justifyContent: "space-around",
+        marginBottom: 20,
+        gap: 20,
+        padding: 10
+      }}>
+        <Input
+          style={[mainScreen.input, mainScreen.shadowProp]}
+          title="Age"
+          input={bmiInfo.age}
+        />
+        <Input
+          style={[mainScreen.input, mainScreen.shadowProp]}
+          title="Weight"
+          input={bmiInfo.age}
+        />
+      </View>
       <View style={[mainScreen.input, mainScreen.shadowProp]}>
         <Text>Height</Text>
         <Text>cm</Text>
@@ -66,6 +76,8 @@ const mainScreen = StyleSheet.create({
     backgroundColor: "#F5F7FF",
     display: "flex",
     paddingVertical: 40,
+    gap: 10,
+    flexDirection: "column",
   },
   input: {
     backgroundColor: "#FFF",
@@ -73,6 +85,10 @@ const mainScreen = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    width: "37.5%",
+    padding: 10,
+    borderRadius: 10,
+    gap: 4
   },
   shadowProp: {
     shadowColor: "#171717",
